@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="description" content="This is description"> -->
+    <meta name="keyword" content="KYLE Notes, KYLE, Kyle, Kyle Notes, Notes, K Notes">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Poppins @ Google Fonts -->
+    <!-- font-family: 'Poppins', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Fredoka @ Google Fonts -->
+    <!-- font-family: 'Fredoka', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <!-- Ununtu @ Google Fonts -->
+    <!-- font-family: 'Ubuntu', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="requirements/all.min.css" />
+
+    <!-- CSS For fade-in-out effect -->
+    <link rel="stylesheet" href="https://kyle-inc.github.io/resource/effect-fade-in-out/fade-in-out.css">
+
+    <title>Notes</title>
+    <link rel="icon" href="https://kyle-inc.github.io/resource/notes/notesicon.png" type="image/x-icon">
+
+
+    
+    <link rel="stylesheet" href="requirements/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="requirements/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+
+    <script src="requirements/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+
+    <script src="requirements/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <style>
+        ::selection {
+            color: grey;
+            background: transparent;
+        }
+
+        .body {
+            font-family: 'Ubuntu', sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            border: 0;
+            top: 0;
+        }
+
+        .noteslogopara {
+            top: 0;
+            background-color: #DDE6ED;
+            position: fixed;
+            display: block;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .noteslogomain {
+            width: auto;
+            width: 14vh;
+            min-width: 60px;
+            padding: 1.5vh 1vh;
+        }
+
+        .alltextheading {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="fadein"></div>
+    <script src="https://kyle-inc.github.io/resource/effect-fade-in-out/fade-in-out.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("fadein").remove();
+            }, 1000);
+        };
+    </script>
+
+    <nav class="noteslogopara">
+        <center>
+            <img class="noteslogomain" src="https://kyle-inc.github.io/resource/notes/noteslogo.png">
+        </center>
+    </nav>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div class="container my-3">
+        <div class="card">
+            <div class="card-body">
+                <br>
+                <h5 class="card-titlel, alltextheading">
+                    Add a Note
+                </h5>
+                <br>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" rows="3">
+                    </textarea>
+                </div>
+                <br>
+                <button class="btn btn-primary" id="addBtn" style="background-color:green">
+                    Add Note
+                </button>
+                <br><br>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <hr>
+        <h1 class="alltextheading">Your Notes</h1>
+        <hr>
+
+        <br>
+
+        <div id="notes" class="row container-fluid">
+        </div>
+    </div>
+
+    <script src="requirements/notes-javascript.js"></script>
+
+</body>
+
+</html>
